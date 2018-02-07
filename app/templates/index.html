@@ -1,0 +1,23 @@
+{% import 'macros.html' as macro%}
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset = "utf-8">
+        {% if title %}
+        <title> {{ title }}</title>
+        {% else %}
+        <title> Welcome to the best Pizza website </title>
+        {% endif %}
+      </head>
+      <body>
+        <!--Pizza -->
+        <h3> Pizza</h3>
+        <ul>
+          {{ macro.displayPizzaList(upcoming)}}
+        </ul>
+        <! --Offers Pizza-->
+        <h3> Offers Pizza</h3>
+           {{ macro.displayPizzaList(offers) }}
+         </ul>
+       </body>
+      </html>
